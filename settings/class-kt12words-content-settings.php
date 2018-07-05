@@ -158,6 +158,7 @@ class Kt12Words_Content_Settings {
 	 * Display Allowed Post Type Multi Drop Down
 	 *
 	 * @since    1.0.0
+	 * @since    1.0.1 $saved_post_types explicitly declared array if empty
 	 * @return void
 	 */
 	public function display_allowed_post_type_element() {
@@ -166,6 +167,9 @@ class Kt12Words_Content_Settings {
 		$operator             = 'and'; // 'and' or 'or'.
 		$available_post_types = get_post_types( $args, $output, $operator );
 		$saved_post_types     = get_option( 'kt12word_allowed_post_types' );
+		if ( empty($saved_post_types) ) {
+			$saved_post_types = array();
+		}
 		$select_element       = "<select name='kt12word_allowed_post_types[]' multiple='multiple' id='kt12word_allowed_post_types'>";
 		foreach ( $available_post_types as $post_type ) {
 			$select_element .= "<option value='{$post_type->name}' " . ( in_array( $post_type->name, $saved_post_types, true ) ? "selected='selected'" : '' ) . ">{$post_type->label}</option>";
