@@ -10,7 +10,7 @@
  * Plugin Name:       Word's Content
  * Plugin URI:        https://kt12.in/words-content/#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wordscontentplugin
  * Description:       A plugin that helps you explain things better and increases reader engagement, reducing bounce rate and creates direct leads from page.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Karthik Thayyil
  * Author URI:        https://kt12.in/
  * License:           GPL-2.0+
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'PLUGIN_NAME_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.

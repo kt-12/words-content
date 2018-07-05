@@ -68,3 +68,8 @@ You can also restrict any post type from being scanned from the settings page.
 5. Demo page.
 6. Markup in Frontend.
 7. Sidebar Frontend.
+
+== Changelog ==
+
+= 1.0.1 =
+* in_array on setting file given explicit array if empty string obtained from db
