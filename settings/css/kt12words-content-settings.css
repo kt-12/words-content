@@ -1,0 +1,144 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+ /* Card styles for rotation */
+ .rotate-container {
+  position: relative;
+}
+.rotate-container .card-front, .rotate-container .card-back {
+  width: 100%;
+  /*height: 100%;*/
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+.rotate-container .card-back {
+  -webkit-transform: perspective(1600px) rotateY(180deg);
+  transform: perspective(1600px) rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.rotate-container .rotate-card-front {
+  -webkit-transform: perspective(1600px) rotateY(-180deg);
+  transform: perspective(1600px) rotateY(-180deg);
+}
+.rotate-container .rotate-card-back {
+  -webkit-transform: perspective(1600px) rotateY(0deg);
+  transform: perspective(1600px) rotateY(0deg);
+}
+
+/* Modified card styles */
+/*.card {
+  box-shadow: 0 0px 125px 5px rgb(82, 73, 73);
+  }*/
+  .card .card-header p {
+    margin: 0;
+  }
+  .card .card-background {
+    height: 5em;
+    background-position: center center;
+    background-size: cover;
+  }
+  .card .avatar {
+    max-width: 6em;
+    max-height: 6em;
+    margin-top: -4em;
+    margin-bottom: 1em;
+    border: 4px solid white;
+    border-radius: 50%;
+    /*background: -webkit-radial-gradient(#e3e3e3, #329a7c, #109381);*/
+    /*background: radial-gradient(#e3e3e3, #329a7c, #109381);*/
+  }
+  .card .btn {
+    margin-bottom: 1em;
+    cursor: pointer;
+  }
+  .card .social-links li {
+    margin: 0.5em;
+  }
+  .card .social-links a {
+    font-size: 1.5em;
+  }
+  .card-header {
+    background-color: white;
+  }
+  .card-title {
+    font-size: 1.8em;
+    font-family: inherit;
+  }
+
+  /*UI Fixes*/
+  .select2-results__option,.select2-selection__choice {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .card * {
+    font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  }
+  .card-inverse {
+    color: white;
+  }
+
+  .card-danger {
+    background-color: #d9534f;
+    border-color: #d9534f;
+  }
+
+  .width-288{
+    width: 288px;
+  }
+
+  /*Shadown anmiation*/
+  .pulse {
+    box-shadow: 0 0 0 #19a3fb;
+    animation: pulse 2.8s infinite;
+  }
+  .pulse:hover {
+    animation: none;
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 #19a3fb;
+    }
+    70% {
+      -webkit-box-shadow: 0 0 125px 3px rgba(204,169,44, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 #19a3fb;
+      box-shadow: 0 0 0 0 #19a3fb;
+    }
+    70% {
+      -moz-box-shadow: 0 0 30px 3px rgba(204,169,44, 0);
+      box-shadow: 0 0 125px 3px rgba(204,169,44, 0);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+
+
+
+
+  .card ul.exp li {
+    font-size: 10px;
+    margin-bottom: 2px;
+    text-align: left;
+    font-weight: 500;
+    color: blueviolet;
+    list-style-type: square;
+  }

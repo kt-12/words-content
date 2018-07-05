@@ -1,0 +1,16 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ .kt12word-label{
+    font-size: 18px;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+.margin-left-15-desc{
+    margin-left: -15px;
+}
+.kt12word-card {
+    padding:0;
+}

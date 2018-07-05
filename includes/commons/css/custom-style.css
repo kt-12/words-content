@@ -1,0 +1,402 @@
+/* --- Fonts ---*/
+@font-face {
+  font-family: 'kt12-icon';
+  src:  url('./fonts/kt12-icon.eot?kyadpv');
+  src:  url('./fonts/kt12-icon.eot?kyadpv#iefix') format('embedded-opentype'),
+  url('./fonts/kt12-icon.ttf?kyadpv') format('truetype'),
+  url('./fonts/kt12-icon.woff?kyadpv') format('woff'),
+  url('./fonts/kt12-icon.svg?kyadpv#kt12-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.kt12-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kt12-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kt12-icon-close:before {
+  content: "\f00d";
+}
+.kt12-icon-remove:before {
+  content: "\f00d";
+}
+.kt12-icon-times:before {
+  content: "\f00d";
+}
+.kt12-icon-plus-circle:before {
+  content: "\f055";
+}
+.kt12-icon-minus-circle:before {
+  content: "\f056";
+}
+
+/*-- Common ---*/
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* Turn on custom 8px wide scrollbar */
+.kt12word-sidebar > *::-webkit-scrollbar,
+.kt12word-sidebar::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+.kt12word-sidebar > *::-webkit-scrollbar:hover,
+.kt12word-sidebar::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+.kt12word-sidebar > *::-webkit-scrollbar-thumb:vertical,
+.kt12word-sidebar::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars.
+  Yes, I pulled out digital color meter */
+  background: rgba(0,0,0,0.5);
+  -webkit-border-radius: 100px;
+}
+.kt12word-sidebar > *::-webkit-scrollbar-thumb:vertical:active,
+.kt12word-sidebar::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+/* --- Main ---*/
+.kt12word-body
+{
+  padding-bottom: 30px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+#kt12word-body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+#kt12word-loading-cover
+{
+  background-color: #413c90;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 100000001;
+}
+
+#kt12word-loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -60px 0 0 -60px;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 10px solid #19bee1;
+}
+#kt12word-loading:after {
+  content: '';
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  opacity: 0.7;
+  box-shadow: rgba(255, 255, 255, 0.6) -4px -5px 3px -3px;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+   transform: rotateZ(0deg);
+ }
+ 100% {
+   transform: rotateZ(360deg);
+ }
+}
+
+.kt12word-close
+{
+  cursor: pointer;
+  float: right;
+  line-height: 1;
+}
+
+.kt12word-head
+{
+  background-color: #4e4e4e;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 20px;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+}
+
+.kt12word-sidebar
+{
+  background-color: #fff;
+  display: block;
+  height: 100%;
+  margin: 0;
+  position: fixed;
+  width:100%;
+  z-index: 10000000;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px 2px rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.kt12word-sidebar,
+.kt12word-sidebar * {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.kt12word-title
+{
+  color: inherit;
+  width: calc(100% - 20px);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 30px;
+  word-spacing: 1px;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.kt12word-foot {
+  border-top: 1px solid #e3e3e3;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 399px)
+{
+  .kt12word-sidebar
+  {
+   left: 0;
+   top: 0;
+ }
+}
+
+@media only screen and (min-width: 400px)
+{
+  .kt12word-sidebar
+  {
+   min-width:350px;
+   width:35%;
+   max-width:600px;
+   right: 0;
+   top: 0;
+ }
+}
+
+
+/*---------- Word Highlight Class--------*/
+.kt12word-markup {
+  color: #222;
+  user-select: none;
+  position: relative;
+  padding: 3px 2px 3px 6px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  background: rgba(220,140,141,0.2);
+  transition: .25s ease;
+}
+.kt12word-markup.kt12-active,
+.kt12word-markup:hover {
+  background: #de6c74;
+  color: #fff;
+}
+.kt12word-markup-icon {
+  color: #dc8c8d;
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: top;
+  transition: .25s ease;
+}
+.kt12word-markup.kt12-active > .kt12word-markup-icon,
+.kt12word-markup:hover > .kt12word-markup-icon {
+  color: #fff;
+}
+/* .kt12word-markup-icon.kt12-active {
+  color: #8cb5dc;
+  } */
+
+  /*Animation*/
+  .animated {
+   -webkit-animation-duration: 0.3s;
+   animation-duration: 0.3s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both
+ }
+
+ .animated.infinite {
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite
+ }
+
+ .animated.hinge {
+   -webkit-animation-duration: 2s;
+   animation-duration: 2s
+ }
+
+ .animated.bounceIn,.animated.bounceOut,.animated.flipOutX,.animated.flipOutY {
+   -webkit-animation-duration: .75s;
+   animation-duration: .75s
+ }
+
+ /**Slide Out Right**/
+ @-webkit-keyframes slideOutRight {
+   0% {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+   }
+
+   to {
+     visibility: hidden;
+     -webkit-transform: translate3d(100%,0,0);
+     transform: translate3d(100%,0,0)
+   }
+ }
+
+ @keyframes slideOutRight {
+   0% {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+   }
+
+   to {
+     visibility: hidden;
+     -webkit-transform: translate3d(100%,0,0);
+     transform: translate3d(100%,0,0)
+   }
+ }
+
+ .slideOutRight {
+   -webkit-animation-name: slideOutRight;
+   animation-name: slideOutRight
+ }
+
+
+ /**Slide In Right**/
+ @-webkit-keyframes slideInLeft {
+   0% {
+     -webkit-transform: translate3d(-100%,0,0);
+     transform: translate3d(-100%,0,0);
+     visibility: visible
+   }
+
+   to {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+   }
+ }
+
+ @keyframes slideInLeft {
+   0% {
+     -webkit-transform: translate3d(-100%,0,0);
+     transform: translate3d(-100%,0,0);
+     visibility: visible
+   }
+
+   to {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+   }
+ }
+
+ .slideInLeft {
+   -webkit-animation-name: slideInLeft;
+   animation-name: slideInLeft
+ }
+
+ /**Slide in Right**/
+
+ @-webkit-keyframes slideInRight {
+   0% {
+     -webkit-transform: translate3d(100%,0,0);
+     transform: translate3d(100%,0,0);
+     visibility: visible
+   }
+
+   to {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+   }
+ }
+
+ @keyframes slideInRight {
+   0% {
+     -webkit-transform: translate3d(100%,0,0);
+     transform: translate3d(100%,0,0);
+     visibility: visible
+   }
+
+   to {
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+   }
+ }
+
+ .slideInRight {
+   -webkit-animation-name: slideInRight;
+   animation-name: slideInRight
+ }
+
+
+ @keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.lightSpeedIn {
+  animation-name: lightSpeedIn;
+  animation-timing-function: ease-out;
+}
