@@ -13,10 +13,10 @@ Word's Content plugin helps you explain things better and increases reader's eng
 
 == Description ==
 
-This plugin helps you mark any word in your post and add some engaging content to it.
+This plugin allows you to highlight any word in your post and add some engaging content to it.
 With this plugin &mdash;
 *   You can explain your words better than ever before.
-*   Add highlighting points to validate your facts, add a supporting story to a scenario or an image gallery.
+*   Add highlighting points to validate your facts or add a supporting story to a scenario or an image gallery.
 *   With advanced support for shortcodes, you can add related posts, related products, offers &mdash; everything that you can imagine.
 *   Support for Contact Form 7 makes it easy to get direct leads from almost every single page.
 *   Increase engagement, reduce bounce rate, increase leads through your blog.
